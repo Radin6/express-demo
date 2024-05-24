@@ -1,0 +1,28 @@
+GET http://localhost:3001/movies
+
+###
+GET http://localhost:3001/movies/7d2832f8-c70a-410e-8963-4c93bf36cc9c
+
+###
+GET http://localhost:3001/movies?genre=Action
+
+###
+POST http://localhost:3001/movies
+Content-Type: application/json
+
+{
+  "title": "Negron",
+  "year": 2023,
+  "director": "Jhon Salchicon",
+  "duration": 121,
+  "poster": "https://img.fruugo.com/product/7/41/14532417_max.jpg",
+  "genre": ["Action", "Adventure"]
+}
+
+###
+PATCH http://localhost:3001/movies/7d2832f8-c70a-410e-8963-4c93bf36cc9c
+Content-Type: application/json
+
+{
+  "year": 1983
+}
